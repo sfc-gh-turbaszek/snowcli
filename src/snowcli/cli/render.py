@@ -8,8 +8,9 @@ from typing import List, Optional
 
 import jinja2
 import typer
+from snowcli.cli.common.flags import DEFAULT_CONTEXT_SETTINGS
 
-app = typer.Typer(context_settings={"help_option_names": ["-h", "--help"]}, hidden=True)
+app = typer.Typer(context_settings=DEFAULT_CONTEXT_SETTINGS, hidden=True)
 
 
 def read_file_content(file_name: str):

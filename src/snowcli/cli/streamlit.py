@@ -14,8 +14,9 @@ from snowcli.utils import (
     generate_streamlit_package_wrapper,
 )
 from snowcli.output.printing import print_db_cursor
+from snowcli.cli.common.flags import DEFAULT_CONTEXT_SETTINGS
 
-app = typer.Typer(context_settings={"help_option_names": ["-h", "--help"]})
+app = typer.Typer(context_settings=DEFAULT_CONTEXT_SETTINGS)
 EnvironmentOption = typer.Option("dev", help="Environment name")
 
 from snowcli.cli.snowpark_shared import (
